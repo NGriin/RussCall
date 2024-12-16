@@ -19,7 +19,7 @@ class RegistrationFormType extends AbstractType
             ->add('userName', TextType::class)
             ->add('email', EmailType::class)
             ->add('password', PasswordType::class)
-            ->add('avatarUrl', FileType::class);
+            ->add('avatarUrl', FileType::class, ['required' => false,]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
